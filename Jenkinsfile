@@ -5,7 +5,7 @@ pipeline {
      PATH="${env.SONAR_HOME}/bin:${env.PATH}"
     }
      
-    
+    stages {
   	stage("build & SonarQube analysis") { 
              steps { 
                   withSonarQubeEnv('sonarserver') {
@@ -21,5 +21,5 @@ pipeline {
               }
             }
           }
-           
+    }
 }
